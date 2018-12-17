@@ -1,0 +1,15 @@
+export const global = {
+    actions: {
+        GET_OR_RECOVER_LOGIN_INFO:'GET_OR_RECOVER_LOGIN_INFO'
+    },
+    mutations: {
+        SET_USER_INFO: 'SET_USER_INFO',
+        SET_LOGIN_INFO:'SET_LOGIN_INFO',
+        SET_HISTORICAL_RECORD:'SET_HISTORICAL_RECORD',
+        SET_PLATE_CHOOSE:'SET_PLATE_CHOOSE',
+        SET_COUPONS_CHOOSE:'SET_COUPONS_CHOOSE',
+        SET_BUYER: "SET_BUYER",
+        SET_INVOICE:"SET_INVOICE"
+    },
+
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>优会停</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+</body>
+<script>
+    function ready(callback) {
+        // 如果jsbridge已经注入则直接调用
+        if (window.AlipayJSBridge) {
+            callback && callback();
+        } else {
+            // 如果没有注入则监听注入的事件
+            document.addEventListener('AlipayJSBridgeReady', callback, false);
+        }
+    }
+    ready(function () {
+        console.log('支付宝加载完成')
+        // AlipayJSBridge.call('toast', {
+        //     content: '欢迎使用优会停！'
+        // });
+    });
+    var u = navigator.userAgent;
+    window.isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+    if (isIOS) {        
+        if (screen.height == 812 && screen.width == 375){
+            window.isIOS = true;
+        }else{
+            window.isIOS = false;
+        } 
+    }
+</script>
+
+</html>
